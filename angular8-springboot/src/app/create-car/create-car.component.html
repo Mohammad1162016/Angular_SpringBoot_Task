@@ -1,0 +1,26 @@
+<h3>Create Car</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Brand</label>
+      <input type="text" class="form-control" id="brand" required [(ngModel)]="car.brand" name="brand">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Year of production</label>
+      <input type="text" class="form-control" id="yearOfProduction" required [(ngModel)]="car.yearOfProduction" name="yearOfProduction">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Color</label>
+      <input type="text" class="form-control" id="color" required [(ngModel)]="car.color" name="color">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <!-- <button class="btn btn-success" (click)="newCar()">Add</button> -->
+</div>
